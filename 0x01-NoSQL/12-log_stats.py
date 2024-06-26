@@ -4,7 +4,10 @@ from pymongo import MongoClient
 
 if __name__ == "__main__":
     """ Provides some stats about Nginx logs stored in MongoDB """
-    client = MongoClient('mongodb://127.0.0.1:27017')
+    client = MongoClient('mongodb+srv://ugwu\
+                         paschal:MKqfYbN235ChawzP@cluster0\
+                         .0qm6wow.mongodb.net/?retryWrites\
+                         =true&w=majority&appName=Cluster0')
     nginx_collection = client.logs.nginx
 
     n_logs = nginx_collection.count_documents({})
